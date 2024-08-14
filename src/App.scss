@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.App {
+    
+    div.header{
+        background-color: rgb(61, 125, 221);
+        padding: 1rem;
+
+        h1#logo-text{
+            color: #fff;
+        }
+    }
+
+    .main{
+        display: grid;
+        grid-template-columns: auto auto auto;
+
+        .grid-item{
+            height: 600px;
+            margin: 10px;
+        }
+    }
+  }
