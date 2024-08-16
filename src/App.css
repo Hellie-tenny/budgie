@@ -18,4 +18,31 @@
 .App .main .grid-item {
   height: 600px;
   margin: 10px;
+}
+.App .main .grid-item h2#balance {
+  text-align: right;
+}
+.App .main .grid-item .transact {
+  display: flex;
+  flex-direction: column;
+}
+.App .main .grid-item .transact button {
+  border: none;
+  padding: 1rem;
+  margin: 0.5rem;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.App .main .grid-item .transact button#deposit {
+  background-color: rgb(66, 165, 66);
+}
+.App .main .grid-item .transact button#withdraw {
+  background-color: rgb(236, 76, 76);
+}
+.App .main .grid-item .pockets ul {
+  margin: 0 0 0 10rem;
+}
+.App .main .grid-item .pockets ul li {
+  list-style-type: none;
 }/*# sourceMappingURL=App.css.map */

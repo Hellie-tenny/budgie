@@ -21,6 +21,39 @@
         .grid-item{
             height: 600px;
             margin: 10px;
+
+            h2#balance{
+                text-align: right;
+            }
+
+            .transact{
+                display: flex;
+                flex-direction: column;
+
+                button{
+                    border: none;
+                    padding: 1rem;
+                    margin: .5rem;
+                    color: #fff;
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+                button#deposit{
+                    background-color: rgb(66, 165, 66);
+                }
+                button#withdraw{
+                    background-color: rgb(236, 76, 76);
+                }
+
+            }
+            .pockets{
+                ul{
+                    margin: 0 0 0 10rem;
+                    li{
+                        list-style-type: none;
+                    }
+                }
+            }
         }
     }
   }
