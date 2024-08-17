@@ -1,8 +1,10 @@
 import './App.css';
+import Deposit from './components/Deposit';
 
 function App() {
   return (
     <div className="App">
+      <Deposit />
       <div className="header">
         <h1 id='logo-text'>Budgie.</h1>
       </div>
