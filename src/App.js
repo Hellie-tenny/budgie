@@ -2,6 +2,11 @@ import './App.css';
 import Deposit from './components/Deposit';
 
 function App() {
+
+  const showDepositForm = () => {
+    document.getElementById('deposit-container').style.display = 'flex';
+  }
+
   return (
     <div className="App">
       <Deposit />
@@ -12,10 +17,10 @@ function App() {
         <div className='grid-item'></div>
         <div className='grid-item'>
           <div className='transact'>
-            <button id='deposit'>Deposit</button>
+            <button onClick={showDepositForm} id='deposit'>Deposit</button>
             <button id='withdraw'>Withdraw</button>
           </div>
-          
+
         </div>
         <div className='grid-item'>
           <h2 id="balance">1,000,000,000</h2>
