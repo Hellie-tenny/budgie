@@ -1,20 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .App {
-    
-    div.header{
+
+    div.header {
         background-color: rgb(61, 125, 221);
         padding: 1rem;
 
-        h1#logo-text{
+        h1#logo-text {
             color: #fff;
         }
     }
 
-    #deposit-container{
+    #deposit-container {
         height: 100vh;
         width: 100%;
         background-color: rgba(0, 0, 0, 0.5);
@@ -24,35 +25,48 @@
         align-items: center;
         justify-content: center;
 
-        span{
-            color: #fff;
-            position: absolute;
-            background-color: black;
-            padding: 15px;
-            right: 0;
-            top: 0;
-            cursor: pointer;
-        }
-        span:hover{
-            background-color: rgb(201, 201, 201);
-        }
-        
-        .deposit-form{
+
+
+        .deposit-form {
             background-color: rgb(201, 201, 201);
             padding: 1rem;
+            width: 60%;
             display: flex;
             flex-direction: column;
             border-radius: 10px;
 
-            input{
+            span {
+                color: black;
+                // background-color: black;
+                width: 10px;
+                height: 10px;
+                padding: 15px;
+                position: relative;
+                right: -95%;
+                top: 0;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            span:hover {
+                background-color: rgb(24, 20, 20);
+                color: #fff;
+            }
+            input[type='text']{
+                margin: 20px 0;
+            }
+            input {
                 border: none;
                 padding: 1rem;
             }
-            select{
+
+            select {
                 cursor: pointer;
             }
-            
-            button{
+
+            button {
                 background-color: black;
                 padding: 1rem;
                 border: none;
@@ -65,23 +79,23 @@
 
     }
 
-    .main{
+    .main {
         display: grid;
         grid-template-columns: auto auto auto;
 
-        .grid-item{
+        .grid-item {
             height: 600px;
             margin: 10px;
 
-            h2#balance{
+            h2#balance {
                 text-align: right;
             }
 
-            .transact{
+            .transact {
                 display: flex;
                 flex-direction: column;
 
-                button{
+                button {
                     border: none;
                     padding: 1rem;
                     margin: .5rem;
@@ -89,22 +103,26 @@
                     font-weight: 600;
                     cursor: pointer;
                 }
-                button#deposit{
+
+                button#deposit {
                     background-color: rgb(66, 165, 66);
                 }
-                button#withdraw{
+
+                button#withdraw {
                     background-color: rgb(236, 76, 76);
                 }
 
             }
-            .pockets{
-                ul{
+
+            .pockets {
+                ul {
                     margin: 0 0 0 10rem;
-                    li{
+
+                    li {
                         list-style-type: none;
                     }
                 }
             }
         }
     }
-  }
+}

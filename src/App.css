@@ -21,24 +21,33 @@
   align-items: center;
   justify-content: center;
 }
-.App #deposit-container span {
-  color: #fff;
-  position: absolute;
-  background-color: black;
-  padding: 15px;
-  right: 0;
-  top: 0;
-  cursor: pointer;
-}
-.App #deposit-container span:hover {
-  background-color: rgb(201, 201, 201);
-}
 .App #deposit-container .deposit-form {
   background-color: rgb(201, 201, 201);
   padding: 1rem;
+  width: 60%;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
+}
+.App #deposit-container .deposit-form span {
+  color: black;
+  width: 10px;
+  height: 10px;
+  padding: 15px;
+  position: relative;
+  right: -95%;
+  top: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App #deposit-container .deposit-form span:hover {
+  background-color: rgb(24, 20, 20);
+  color: #fff;
+}
+.App #deposit-container .deposit-form input[type=text] {
+  margin: 20px 0;
 }
 .App #deposit-container .deposit-form input {
   border: none;

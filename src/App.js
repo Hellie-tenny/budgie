@@ -1,7 +1,13 @@
 import './App.css';
 import Deposit from './components/Deposit';
+import React, {useState} from 'react';
+
+
 
 function App() {
+
+// states and variables
+const [cashBalance, setcashBalance] = useState(0);
 
   const showDepositForm = () => {
     document.getElementById('deposit-container').style.display = 'flex';
@@ -9,7 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      <Deposit />
+      <Deposit cashBalance={cashBalance} setcashBalance={setcashBalance} />
       <div className="header">
         <h1 id='logo-text'>Budgie.</h1>
       </div>
@@ -26,10 +32,10 @@ function App() {
           <h2 id="balance">1,000,000,000</h2>
           <div className='pockets'>
             <ul>
-              <li>Cash</li>
-              <li>Mpamba</li>
-              <li>Airtel Money</li>
-              <li>Bank</li>
+              <li>Cash : {cashBalance}</li>
+              <li>Mpamba : </li>
+              <li>Airtel Money : </li>
+              <li>Bank : </li>
             </ul>
           </div>
         </div>
