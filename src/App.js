@@ -7,7 +7,7 @@ import React, {useState} from 'react';
 function App() {
 
 // states and variables
-const [cashBalance, setcashBalance] = useState(0);
+const [cashBalance, setCashBalance] = useState(0);
 
   const showDepositForm = () => {
     document.getElementById('deposit-container').style.display = 'flex';
@@ -15,7 +15,7 @@ const [cashBalance, setcashBalance] = useState(0);
 
   return (
     <div className="App">
-      <Deposit cashBalance={cashBalance} setcashBalance={setcashBalance} />
+      <Deposit cashBalance={cashBalance} setCashBalance={setCashBalance} />
       <div className="header">
         <h1 id='logo-text'>Budgie.</h1>
       </div>
