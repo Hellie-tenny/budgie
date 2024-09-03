@@ -7,7 +7,7 @@ const Deposit = (props) => {
     const [depositValue, setDepositValue] = useState(0);
     const [pocket, setPocket] = useState("cash");
 
-    console.log(props.setCashBalance)
+    console.log(props.setCashBalance);
 
     const closeDepositForm = () => {
         document.getElementById('deposit-container').style.display = "none";
@@ -25,7 +25,6 @@ const Deposit = (props) => {
             props.setBankBalance(Number(props.bankBalance) + Number(depositValue));
         }
     }
-}
 
 return (
     <div className='deposit-container' id='deposit-container'>
@@ -40,9 +39,11 @@ return (
                 <option value="mpamba">Mpamba</option>
             </select>
 
-                <button onClick={deposit}>DEPOSIT</button>
-            </div>
+            <button onClick={deposit}>DEPOSIT</button>
         </div>
-    );
+    </div>
+);
+
+}
 
 export default Deposit;
