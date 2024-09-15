@@ -34,9 +34,9 @@ return (
             <input type='text' onChange={(e) => { setDepositValue(e.target.value) }} placeholder='Amount'></input>
 
             <select value={pocket} onChange={changePocket}>
-                <option value="cash">Cash</option>
-                <option value="bank">Bank</option>
-                <option value="mpamba">Mpamba</option>
+                {props.pockets.map(
+                    pocket => <option value={pocket.name}>{pocket.name}</option>
+                )}
             </select>
 
             <button onClick={deposit}>DEPOSIT</button>
