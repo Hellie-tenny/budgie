@@ -19,7 +19,10 @@ const Deposit = (props) => {
 
     const deposit = () => {
         if (pocket === "cash") {
-            props.setCashBalance(Number(props.cashBalance) + Number(depositValue));
+            // props.setPocket((props.pockets) =>
+            //     props.pockets.map((pocket) => {
+            //         pocket.name === "cash" ? {...pocket, value : depositValue} : pocket
+            //     }););
         }
         if (pocket === "bank") {
             props.setBankBalance(Number(props.bankBalance) + Number(depositValue));

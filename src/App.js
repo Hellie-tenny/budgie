@@ -15,7 +15,7 @@ function App() {
   const [balanceList, setBalanceList] = useState([]);
 
   // object approach
-  const pockets = [
+  const [pockets, setPockets] = useState([
     {
       name: "cash",
       value: 400
@@ -32,25 +32,19 @@ function App() {
       name: "mpamba",
       value: 5000
     }
-  ];
+  ]);
 
-  const total = pockets.reduce((acc, pocket) => {
-    return acc + pocket.value;
-  }, 0)
-
-  console.log();
-
-  // useEffect(() => {
-  //   // setting totalBalacnce
-  //   setBalanceList([cashBalance, bankBalance, mpambaBalance, airtelMoneyBalance]);
-  // }, [balanceList]);
 
   useEffect(() => {
-    let total = 0;
-    total = balanceList.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-    console.log("The fricking total is", total)
+
+    const total = pockets.reduce((acc, pocket) => {
+      return acc + pocket.value;
+    }, 0);
+
     setTotalBalance(total);
-  }, [balanceList]);
+    console.log("POCKETS HAS CHANGED!!!!!!!!!!!!")
+
+  }, [pockets]);
 
   const showDepositForm = () => {
     document.getElementById('deposit-container').style.display = 'flex';
@@ -61,6 +55,7 @@ function App() {
     <div className="App">
       <Deposit
         pockets={pockets}
+        setPockets={setPockets}
       />
       <div className="header">
         <h1 id='logo-text'>Budgie.</h1>
@@ -75,7 +70,7 @@ function App() {
 
         </div>
         <div className='grid-item'>
-          <h2 id="balance">{total}</h2>
+          <h2 id="balance">{totalBalance}</h2>
           <div className='pockets'>
             <ul>
               {pockets.map(
