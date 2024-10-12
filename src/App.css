@@ -98,4 +98,12 @@
 }
 .App .main .grid-item .pockets ul li {
   list-style-type: none;
+}
+.App .footer {
+  background-color: black;
+  color: #fff;
+  padding: 1rem;
+}
+.App .footer p {
+  text-align: center;
 }/*# sourceMappingURL=App.css.map */

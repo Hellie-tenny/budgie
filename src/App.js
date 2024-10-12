@@ -1,6 +1,7 @@
 import './App.css';
 import Deposit from './components/Deposit';
 import React, { useEffect, useState } from 'react';
+import Footer from './components/Footer';
 
 
 
@@ -80,6 +81,9 @@ function App() {
           </div>
         </div>
       </div>
+
+      <Footer />
+
     </div>
   );
 }
