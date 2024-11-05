@@ -1,7 +1,12 @@
+@font-face {
+  font-family: poppins;
+  src: url("./res/Poppins-Light.ttf");
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: poppins;
 }
 
 .App div.header {
@@ -78,6 +83,7 @@
 .App .main .grid-item .transact {
   display: flex;
   flex-direction: column;
+  max-width: 100%;
 }
 .App .main .grid-item .transact button {
   border: none;
@@ -93,11 +99,34 @@
 .App .main .grid-item .transact button#withdraw {
   background-color: rgb(236, 76, 76);
 }
+.App .main .grid-item .pockets {
+  max-width: 100%;
+}
 .App .main .grid-item .pockets ul {
   margin: 0 0 0 10rem;
 }
 .App .main .grid-item .pockets ul li {
   list-style-type: none;
+}
+.App .main .grid-item .shopping-list {
+  max-width: 40%;
+}
+.App .main .grid-item .shopping-list form {
+  display: flex;
+}
+.App .main .grid-item .shopping-list form input, .App .main .grid-item .shopping-list form button {
+  padding: 0.5rem;
+  margin: 0 0.3rem;
+}
+.App .main .grid-item .shopping-list form button {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  font-weight: 600;
+  border: none;
+}
+.App .main .grid-item .shopping-list table tr td {
+  padding: 1.5rem;
 }
 .App .footer {
   background-color: black;

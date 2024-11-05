@@ -1,7 +1,13 @@
+@font-face {
+    font-family: poppins;
+    src: url("./res/Poppins-Light.ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: poppins;
 }
 
 .App {
@@ -94,6 +100,7 @@
             .transact {
                 display: flex;
                 flex-direction: column;
+                max-width: 100%;
 
                 button {
                     border: none;
@@ -115,11 +122,46 @@
             }
 
             .pockets {
+                max-width: 100%;
                 ul {
                     margin: 0 0 0 10rem;
 
                     li {
                         list-style-type: none;
+                    }
+                }
+            }
+
+            .shopping-list{
+                max-width: 40%;
+
+                form{
+                    display: flex;
+                    input, button{
+                        padding: .5rem;
+                        margin: 0 .3rem;
+                    }
+                    input#item{
+                
+                    }
+                    input#price{
+        
+                    }
+                    button{
+        
+                        cursor: pointer;
+                        color: white;
+                        background-color: black;
+                        font-weight: 600;
+                        border: none;
+                    }
+                }
+
+                table{
+                    tr{
+                        td{
+                            padding: 1.5rem;
+                        }
                     }
                 }
             }

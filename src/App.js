@@ -2,16 +2,13 @@ import './App.css';
 import Deposit from './components/Deposit';
 import React, { useEffect, useState } from 'react';
 import Footer from './components/Footer';
-
-
-
+import ShoppingList from './components/ShoppingList';
 
 function App() {
 
   // states and other variables
   const [totalBalance, setTotalBalance] = useState(0);
   const [pockets, setPockets] = useState([]);
-  let storedPockets = [];
 
   useEffect(() => {
     if (!localStorage.getItem("pockets")) {
@@ -57,10 +54,10 @@ function App() {
   }
 
   // this function updates pockets
-  const updatePockets = () => {
-    // updating balances
-    setPockets(JSON.parse(localStorage.getItem("pockets")));
-  }
+  // const updatePockets = () => {
+  //   // updating balances
+  //   setPockets(JSON.parse(localStorage.getItem("pockets")));
+  // }
 
   // this function updates the total balance
   const updateBalance = () => {
@@ -79,18 +76,28 @@ function App() {
         pockets={pockets}
         setPockets={setPockets}
       />
+
+      {/* header section */}
       <div className="header">
         <h1 id='logo-text'>Budgie.</h1>
       </div>
+
       <div className='main'>
-        <div className='grid-item'></div>
+
+        {/* shoppig list */}
+        <div className='grid-item'>
+          <ShoppingList />
+        </div>
+
+        {/* transact */}
         <div className='grid-item'>
           <div className='transact'>
             <button onClick={showDepositForm} id='deposit'>Deposit</button>
             <button id='withdraw'>Withdraw</button>
           </div>
-
         </div>
+
+        {/* pockets and balance */}
         <div className='grid-item'>
           <h2 id="balance">{totalBalance}</h2>
           <div className='pockets'>
@@ -101,6 +108,7 @@ function App() {
             </ul>
           </div>
         </div>
+
       </div>
 
       <Footer />
