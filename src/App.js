@@ -1,5 +1,5 @@
 import './App.css';
-import Deposit from './components/Deposit';
+import Form from './components/Form';
 import React, { useEffect, useState } from 'react';
 import Footer from './components/Footer';
 import ShoppingList from './components/ShoppingList';
@@ -9,6 +9,7 @@ function App() {
   // states and other variables
   const [totalBalance, setTotalBalance] = useState(0);
   const [pockets, setPockets] = useState([]);
+  const [transType, setTransType] = useState();
 
   useEffect(() => {
     if (!localStorage.getItem("pockets")) {
@@ -48,8 +49,15 @@ function App() {
     console.log("use effect activated!");
   }, [pockets]);
 
+  // function that shows deposit form
   const showDepositForm = () => {
     document.getElementById('deposit-container').style.display = 'flex';
+
+  }
+
+// function that shows withdraw form
+  const showWithdrawForm = () => {
+    document.getElementById('withdraw-container').style.display = 'flex';
 
   }
 
@@ -72,9 +80,11 @@ function App() {
 
   return (
     <div className="App">
-      <Deposit
+      <Form
         pockets={pockets}
         setPockets={setPockets}
+        transType={transType}
+        setTransType={setTransType}
       />
 
       {/* header section */}
@@ -93,13 +103,13 @@ function App() {
         <div className='grid-item'>
           <div className='transact'>
             <button onClick={showDepositForm} id='deposit'>Deposit</button>
-            <button id='withdraw'>Withdraw</button>
+            <button onClick={showWithdrawForm} id='withdraw'>Withdraw</button>
           </div>
         </div>
 
         {/* pockets and balance */}
         <div className='grid-item'>
-          <h2 id="balance">{totalBalance}</h2>
+          <h2 id="balance">{totalBalance.toLocaleString()}</h2>
           <div className='pockets'>
             <ul>
               {pockets.map(

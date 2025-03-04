@@ -16,7 +16,7 @@
 .App div.header h1#logo-text {
   color: #fff;
 }
-.App #deposit-container {
+.App #deposit-container, .App #withdraw-container {
   height: 100vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -26,15 +26,15 @@
   align-items: center;
   justify-content: center;
 }
-.App #deposit-container .deposit-form {
-  background-color: rgb(201, 201, 201);
+.App #deposit-container .deposit-form, .App #withdraw-container .deposit-form {
+  background-color: rgb(255, 255, 255);
   padding: 1rem;
   width: 60%;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
 }
-.App #deposit-container .deposit-form span {
+.App #deposit-container .deposit-form span, .App #withdraw-container .deposit-form span {
   color: black;
   width: 10px;
   height: 10px;
@@ -47,21 +47,22 @@
   justify-content: center;
   align-items: center;
 }
-.App #deposit-container .deposit-form span:hover {
+.App #deposit-container .deposit-form span:hover, .App #withdraw-container .deposit-form span:hover {
   background-color: rgb(24, 20, 20);
   color: #fff;
 }
-.App #deposit-container .deposit-form input[type=text] {
+.App #deposit-container .deposit-form input[type=text], .App #withdraw-container .deposit-form input[type=text] {
   margin: 20px 0;
+  border: 2px solid black;
 }
-.App #deposit-container .deposit-form input {
+.App #deposit-container .deposit-form input, .App #withdraw-container .deposit-form input {
   border: none;
   padding: 1rem;
 }
-.App #deposit-container .deposit-form select {
+.App #deposit-container .deposit-form select, .App #withdraw-container .deposit-form select {
   cursor: pointer;
 }
-.App #deposit-container .deposit-form button {
+.App #deposit-container .deposit-form button, .App #withdraw-container .deposit-form button {
   background-color: black;
   padding: 1rem;
   border: none;
