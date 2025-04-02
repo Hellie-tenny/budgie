@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 
 export default function ShoppingList() {
@@ -22,7 +23,7 @@ export default function ShoppingList() {
   ];
 
   function addToCart() {
-    shoppingList = [...shoppingList, {item: item, price: price}];
+    // shoppingList = [...shoppingList, {item: item, price: price}];
   }
 
   useEffect(() => {
