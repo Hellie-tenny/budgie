@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import MainAccount from './components/MainAccount';
 import NotFound from './components/NotFound';
 import Profile from './components/Profile';
+import Saving from './components/Saving';
 
 function App() {
 
@@ -39,6 +40,8 @@ function App() {
           <MainAccount /> :
           page === "profile" ?
             <Profile /> :
+          page === "savings" ?
+            <Saving /> :
             <NotFound />
         }
 

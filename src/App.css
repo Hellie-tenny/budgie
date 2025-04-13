@@ -27,7 +27,9 @@ body .App div.header h1#logo-text {
   color: #fff;
 }
 body .App #deposit-container,
-body .App #withdraw-container, body .App .edit-form {
+body .App #withdraw-container,
+body .App .edit-form,
+body .App .savings-form {
   min-height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -40,7 +42,13 @@ body .App #withdraw-container, body .App .edit-form {
   justify-content: center;
 }
 body .App #deposit-container .edit-form-contents,
-body .App #withdraw-container .edit-form-contents, body .App .edit-form .edit-form-contents {
+body .App #deposit-container .savings-form-container,
+body .App #withdraw-container .edit-form-contents,
+body .App #withdraw-container .savings-form-container,
+body .App .edit-form .edit-form-contents,
+body .App .edit-form .savings-form-container,
+body .App .savings-form .edit-form-contents,
+body .App .savings-form .savings-form-container {
   display: flex;
   flex-direction: column;
   background-color: rgb(255, 255, 255);
@@ -48,17 +56,68 @@ body .App #withdraw-container .edit-form-contents, body .App .edit-form .edit-fo
   border-radius: 10px;
   width: 60%;
 }
+body .App #deposit-container .edit-form-contents .savings-form-controls,
+body .App #deposit-container .savings-form-container .savings-form-controls,
+body .App #withdraw-container .edit-form-contents .savings-form-controls,
+body .App #withdraw-container .savings-form-container .savings-form-controls,
+body .App .edit-form .edit-form-contents .savings-form-controls,
+body .App .edit-form .savings-form-container .savings-form-controls,
+body .App .savings-form .edit-form-contents .savings-form-controls,
+body .App .savings-form .savings-form-container .savings-form-controls {
+  display: flex;
+  justify-content: right;
+}
+body .App #deposit-container .edit-form-contents .savings-form-controls span,
+body .App #deposit-container .savings-form-container .savings-form-controls span,
+body .App #withdraw-container .edit-form-contents .savings-form-controls span,
+body .App #withdraw-container .savings-form-container .savings-form-controls span,
+body .App .edit-form .edit-form-contents .savings-form-controls span,
+body .App .edit-form .savings-form-container .savings-form-controls span,
+body .App .savings-form .edit-form-contents .savings-form-controls span,
+body .App .savings-form .savings-form-container .savings-form-controls span {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+body .App #deposit-container .edit-form-contents .savings-form-controls span:hover,
+body .App #deposit-container .savings-form-container .savings-form-controls span:hover,
+body .App #withdraw-container .edit-form-contents .savings-form-controls span:hover,
+body .App #withdraw-container .savings-form-container .savings-form-controls span:hover,
+body .App .edit-form .edit-form-contents .savings-form-controls span:hover,
+body .App .edit-form .savings-form-container .savings-form-controls span:hover,
+body .App .savings-form .edit-form-contents .savings-form-controls span:hover,
+body .App .savings-form .savings-form-container .savings-form-controls span:hover {
+  color: #fff;
+  background-color: black;
+}
 body .App #deposit-container .edit-form-contents input,
-body .App #withdraw-container .edit-form-contents input, body .App .edit-form .edit-form-contents input {
+body .App #deposit-container .savings-form-container input,
+body .App #withdraw-container .edit-form-contents input,
+body .App #withdraw-container .savings-form-container input,
+body .App .edit-form .edit-form-contents input,
+body .App .edit-form .savings-form-container input,
+body .App .savings-form .edit-form-contents input,
+body .App .savings-form .savings-form-container input {
   padding: 1rem;
 }
 body .App #deposit-container .edit-form-contents .controls,
-body .App #withdraw-container .edit-form-contents .controls, body .App .edit-form .edit-form-contents .controls {
+body .App #deposit-container .savings-form-container .controls,
+body .App #withdraw-container .edit-form-contents .controls,
+body .App #withdraw-container .savings-form-container .controls,
+body .App .edit-form .edit-form-contents .controls,
+body .App .edit-form .savings-form-container .controls,
+body .App .savings-form .edit-form-contents .controls,
+body .App .savings-form .savings-form-container .controls {
   display: flex;
   justify-content: space-between;
 }
 body .App #deposit-container .edit-form-contents .controls button,
-body .App #withdraw-container .edit-form-contents .controls button, body .App .edit-form .edit-form-contents .controls button {
+body .App #deposit-container .savings-form-container .controls button,
+body .App #withdraw-container .edit-form-contents .controls button,
+body .App #withdraw-container .savings-form-container .controls button,
+body .App .edit-form .edit-form-contents .controls button,
+body .App .edit-form .savings-form-container .controls button,
+body .App .savings-form .edit-form-contents .controls button,
+body .App .savings-form .savings-form-container .controls button {
   background-color: black;
   width: 49%;
   color: white;
@@ -67,7 +126,13 @@ body .App #withdraw-container .edit-form-contents .controls button, body .App .e
   margin: 0.5rem 0;
 }
 body .App #deposit-container .deposit-form,
-body .App #withdraw-container .deposit-form, body .App .edit-form .deposit-form {
+body .App #deposit-container .savings-form,
+body .App #withdraw-container .deposit-form,
+body .App #withdraw-container .savings-form,
+body .App .edit-form .deposit-form,
+body .App .edit-form .savings-form,
+body .App .savings-form .deposit-form,
+body .App .savings-form .savings-form {
   background-color: rgb(255, 255, 255);
   padding: 1rem;
   width: 60%;
@@ -76,7 +141,13 @@ body .App #withdraw-container .deposit-form, body .App .edit-form .deposit-form 
   border-radius: 10px;
 }
 body .App #deposit-container .deposit-form span,
-body .App #withdraw-container .deposit-form span, body .App .edit-form .deposit-form span {
+body .App #deposit-container .savings-form span,
+body .App #withdraw-container .deposit-form span,
+body .App #withdraw-container .savings-form span,
+body .App .edit-form .deposit-form span,
+body .App .edit-form .savings-form span,
+body .App .savings-form .deposit-form span,
+body .App .savings-form .savings-form span {
   color: black;
   width: 10px;
   height: 10px;
@@ -90,26 +161,56 @@ body .App #withdraw-container .deposit-form span, body .App .edit-form .deposit-
   align-items: center;
 }
 body .App #deposit-container .deposit-form span:hover,
-body .App #withdraw-container .deposit-form span:hover, body .App .edit-form .deposit-form span:hover {
+body .App #deposit-container .savings-form span:hover,
+body .App #withdraw-container .deposit-form span:hover,
+body .App #withdraw-container .savings-form span:hover,
+body .App .edit-form .deposit-form span:hover,
+body .App .edit-form .savings-form span:hover,
+body .App .savings-form .deposit-form span:hover,
+body .App .savings-form .savings-form span:hover {
   background-color: rgb(24, 20, 20);
   color: #fff;
 }
 body .App #deposit-container .deposit-form input[type=text],
-body .App #withdraw-container .deposit-form input[type=text], body .App .edit-form .deposit-form input[type=text] {
+body .App #deposit-container .savings-form input[type=text],
+body .App #withdraw-container .deposit-form input[type=text],
+body .App #withdraw-container .savings-form input[type=text],
+body .App .edit-form .deposit-form input[type=text],
+body .App .edit-form .savings-form input[type=text],
+body .App .savings-form .deposit-form input[type=text],
+body .App .savings-form .savings-form input[type=text] {
   margin: 20px 0;
   border: 2px solid black;
 }
 body .App #deposit-container .deposit-form input,
-body .App #withdraw-container .deposit-form input, body .App .edit-form .deposit-form input {
+body .App #deposit-container .savings-form input,
+body .App #withdraw-container .deposit-form input,
+body .App #withdraw-container .savings-form input,
+body .App .edit-form .deposit-form input,
+body .App .edit-form .savings-form input,
+body .App .savings-form .deposit-form input,
+body .App .savings-form .savings-form input {
   border: none;
   padding: 1rem;
 }
 body .App #deposit-container .deposit-form select,
-body .App #withdraw-container .deposit-form select, body .App .edit-form .deposit-form select {
+body .App #deposit-container .savings-form select,
+body .App #withdraw-container .deposit-form select,
+body .App #withdraw-container .savings-form select,
+body .App .edit-form .deposit-form select,
+body .App .edit-form .savings-form select,
+body .App .savings-form .deposit-form select,
+body .App .savings-form .savings-form select {
   cursor: pointer;
 }
 body .App #deposit-container .deposit-form button,
-body .App #withdraw-container .deposit-form button, body .App .edit-form .deposit-form button {
+body .App #deposit-container .savings-form button,
+body .App #withdraw-container .deposit-form button,
+body .App #withdraw-container .savings-form button,
+body .App .edit-form .deposit-form button,
+body .App .edit-form .savings-form button,
+body .App .savings-form .deposit-form button,
+body .App .savings-form .savings-form button {
   background-color: black;
   padding: 1rem;
   border: none;
@@ -118,6 +219,7 @@ body .App #withdraw-container .deposit-form button, body .App .edit-form .deposi
   cursor: pointer;
 }
 body .App .main {
+  width: 100%;
   height: 100%;
   display: grid;
   grid-template-columns: auto auto auto;
@@ -210,6 +312,39 @@ body .App .main .content_container .grid-item .shopping-list form button {
 }
 body .App .main .content_container .grid-item .shopping-list table tr td {
   padding: 1.5rem;
+}
+body .App .profile-page {
+  padding: 2rem;
+}
+body .App .profile-page i.profile-icon {
+  font-size: 5rem;
+  text-align: center;
+}
+body .App .profile-page .account-details span {
+  display: block;
+}
+body .App .profile-page .account-details span.account-name {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+body .App .savings-container {
+  padding: 2rem;
+}
+body .App .savings-container .controls button {
+  background-color: black;
+  color: #fff;
+  width: 5rem;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+body .App .savings-container .controls button i {
+  color: #fff;
+  font-weight: 600;
+}
+body .App .savings-container .controls button:hover {
+  background-color: grey;
 }
 body .App .footer {
   background-color: black;
