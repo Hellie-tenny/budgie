@@ -1,6 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
-const SavingsForm = () => {
+const SavingsForm = (props) => {
+
+    // variablea
+    const [newGoalItem, setNewGoalItem] = useState("");
+    const [newGoalCost, setNewGoalCost] = useState("");
+
+    function addGoal(){
+        const newGoal = {goalItem : newGoalItem, cost : newGoalCost};
+        const goals = [...props.goals, newGoal];
+        props.setGoals(goals);
+        localStorage.setItem("goals", JSON.stringify(goals));
+        console.log(goals);
+        
+        // console.log(props.goals);
+    }
+
     return (
         <div className="savings-form" id="savings-form">
 
@@ -13,8 +28,9 @@ const SavingsForm = () => {
                     </span>
                 </div>
 
-                <input placeholder="Item..." />
-                <input placeholder="Cost" />
+                <input placeholder="Item..." value={newGoalItem} onChange={(e) => setNewGoalItem(e.target.value)}/>
+                <input placeholder="Cost" value={newGoalCost} onChange={(e) => setNewGoalCost(e.target.value)}/>
+                <button onClick={() => addGoal()}>ADD GOAL</button>
             </div>
 
         </div>

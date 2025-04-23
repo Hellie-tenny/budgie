@@ -56,6 +56,21 @@ body .App .savings-form .savings-form-container {
   border-radius: 10px;
   width: 60%;
 }
+body .App #deposit-container .edit-form-contents button,
+body .App #deposit-container .savings-form-container button,
+body .App #withdraw-container .edit-form-contents button,
+body .App #withdraw-container .savings-form-container button,
+body .App .edit-form .edit-form-contents button,
+body .App .edit-form .savings-form-container button,
+body .App .savings-form .edit-form-contents button,
+body .App .savings-form .savings-form-container button {
+  background-color: black;
+  padding: 1rem;
+  border: none;
+  color: #fff;
+  margin: 1rem 0;
+  cursor: pointer;
+}
 body .App #deposit-container .edit-form-contents .savings-form-controls,
 body .App #deposit-container .savings-form-container .savings-form-controls,
 body .App #withdraw-container .edit-form-contents .savings-form-controls,
@@ -345,6 +360,27 @@ body .App .savings-container .controls button i {
 }
 body .App .savings-container .controls button:hover {
   background-color: grey;
+}
+body .App .savings-container .goals-container .goal-item {
+  background-color: rgb(215, 215, 221);
+  padding: 1rem;
+  margin: 0.5rem 0;
+}
+body .App .savings-container .goals-container .goal-item .top {
+  display: flex;
+}
+body .App .savings-container .goals-container .goal-item .top .details {
+  flex: 4;
+}
+body .App .savings-container .goals-container .goal-item .top .controls {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+body .App .savings-container .goals-container .goal-item .top .controls i {
+  font-size: 1.3rem;
+  cursor: pointer;
 }
 body .App .footer {
   background-color: black;
