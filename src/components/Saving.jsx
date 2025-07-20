@@ -5,6 +5,12 @@ const Saving = () => {
 
     const [goals, setGoals] = useState([]);
 
+    function deletSavingeGoal(targetId) {
+        const updatedGoals = goals.filter((goal) => goal.id !==targetId);
+        setGoals(updatedGoals);
+        localStorage.setItem("goals", JSON.stringify(updatedGoals));
+    }
+
     useEffect(() => {
         if (!localStorage.getItem("goals")) {
             // object approach sample array of objects
@@ -19,12 +25,6 @@ const Saving = () => {
             console.log("Local Locally stored goals found", goals)
         }
     }, []);
-
-    useEffect(() => {
-
-
-
-    }, [goals]);
 
     return (
         <div className="savings-container">
@@ -57,7 +57,7 @@ const Saving = () => {
                                 </div>
 
                                 <div className="controls">
-                                    <i className="fa-solid fa-trash"></i>
+                                    <i className="fa-solid fa-trash" onClick={() => deletSavingeGoal(goal.id)}></i>
                                 </div>
                             </div>
 

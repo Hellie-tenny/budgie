@@ -7,7 +7,8 @@ const SavingsForm = (props) => {
     const [newGoalCost, setNewGoalCost] = useState("");
 
     function addGoal(){
-        const newGoal = {goalItem : newGoalItem, cost : newGoalCost};
+        const id = Date.now().toString(36);
+        const newGoal = {id: id, goalItem : newGoalItem, cost : newGoalCost};
         const goals = [...props.goals, newGoal];
         props.setGoals(goals);
         localStorage.setItem("goals", JSON.stringify(goals));

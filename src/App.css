@@ -13,6 +13,11 @@ i {
   color: rgb(40, 40, 75);
 }
 
+.get-started-icons {
+  font-size: 10rem;
+  color: rgb(45, 45, 73);
+}
+
 body {
   height: 100vh;
 }
@@ -335,6 +340,42 @@ body .App .main .content_container .grid-item .shopping-list form button {
 }
 body .App .main .content_container .grid-item .shopping-list table tr td {
   padding: 1.5rem;
+}
+body .App .login {
+  height: 100vh;
+}
+body .App .login .login-container .get-started {
+  height: 100vh;
+  background-image: url("./res/imgs/hero.png");
+  background-color: rgba(170, 170, 243, 0.308);
+  display: flex;
+  flex-direction: column;
+}
+body .App .login .login-container .get-started .login-header {
+  background: transparent;
+  padding: 1rem;
+}
+body .App .login .login-container .get-started .get-started-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  height: 100%;
+  padding: 2rem;
+  background: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgb(255, 255, 255));
+}
+body .App .login .login-container .get-started .get-started-container p {
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+}
+body .App .login .login-container .feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 body .App .profile-page {
   padding: 2rem;

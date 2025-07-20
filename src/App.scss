@@ -13,6 +13,10 @@
 i {
     color: rgb(40, 40, 75);
 }
+.get-started-icons{
+    font-size: 10rem;
+    color: rgb(45, 45, 73);
+}
 
 body {
     height: 100vh;
@@ -31,7 +35,7 @@ body {
                 color: #fff;
             }
 
-            i{
+            i {
                 font-size: 2rem;
                 color: #fff;
                 cursor: pointer;
@@ -64,7 +68,7 @@ body {
                 border-radius: 10px;
                 width: 60%;
 
-                button{
+                button {
                     background-color: black;
                     padding: 1rem;
                     border: none;
@@ -73,20 +77,20 @@ body {
                     cursor: pointer;
                 }
 
-                .savings-form-controls{
+                .savings-form-controls {
                     display: flex;
                     justify-content: right;
 
-                    span{
+                    span {
                         padding: .5rem;
                         cursor: pointer;
                     }
-                    
 
-                    span:hover{
+
+                    span:hover {
                         color: #fff;
                         background-color: black;
-                        
+
                     }
                 }
 
@@ -297,6 +301,50 @@ body {
 
         }
 
+        .login {
+            height: 100vh;
+
+            .login-container {
+                .get-started {
+                    height: 100vh;
+                    background-image: url("./res/imgs/hero.png");
+                    background-color: rgba(170, 170, 243, 0.308);
+                    display: flex;
+                    flex-direction: column;
+
+                    .login-header {
+                        background: transparent;
+                        padding: 1rem;
+                    }
+
+                    .get-started-container {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: end;
+                        align-items: center;
+                        height: 100%;
+                        padding: 2rem;
+                        background: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgb(255, 255, 255));
+
+                        p {
+                            text-align: center;
+                            padding: 1rem;
+                            font-size: 2rem;
+                        }
+                    }
+                }
+
+                .feature {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100vh;
+                }
+            }
+        }
+
         .profile-page {
             padding: 2rem;
 
@@ -341,24 +389,26 @@ body {
                 }
             }
 
-            .goals-container{
-                .goal-item{
+            .goals-container {
+                .goal-item {
                     background-color: rgb(215, 215, 221);
                     padding: 1rem;
                     margin: .5rem 0;
-                    .top{
+
+                    .top {
                         display: flex;
 
-                        .details{
+                        .details {
                             flex: 4;
                         }
-                        .controls{
+
+                        .controls {
                             flex: 1;
                             display: flex;
                             align-items: center;
                             justify-content: right;
 
-                            i{
+                            i {
                                 font-size: 1.3rem;
                                 cursor: pointer;
                             }

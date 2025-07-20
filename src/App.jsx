@@ -1,51 +1,30 @@
 import './App.css';
 import './res/fontawesome-free-6.7.2-web/css/all.min.css';
-import React, { useState } from 'react';
-import Footer from './components/Footer';
-// import ShoppingList from './components/ShoppingList';
-import MainAccount from './components/MainAccount';
-import NotFound from './components/NotFound';
-import Profile from './components/Profile';
-import Saving from './components/Saving';
-import Navigation from './components/Navigation';
+import Main from './components/Main';
+import Login from './components/Login';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate, useNavigate } from 'react-router-dom';
 
 function App() {
-
-  // states and other variables
-  const [page, setPage] = useState("account");
-
-  // FIRST PART
+  // States and variables
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   return (
 
     <div className="App">
-      {/* SECOND PART */}
 
-      {/* header section */}
-      <div className="header">
-        <h1 id='logo-text'>Budgie.</h1>
-        <i className="fa-regular fa-circle-user" onClick={() => setPage("profile")}></i>
-      </div>
+      <Router>
+        <Routes>
+          {/* <Route path='/' element={<Main />} /> */}
+          <Route path='/login' element={<Login />} />
+          <Route
+            path='/'
+            element={isLoggedIn ? <Main /> : <Navigate to='/login' replace />}
 
-      <div className='main'>
+          />
+        </Routes>
 
-        <Navigation 
-          setPage={setPage}
-        />
-
-        {page === "account" ?
-          <MainAccount /> :
-          page === "profile" ?
-            <Profile /> :
-          page === "savings" ?
-            <Saving /> :
-            <NotFound />
-        }
-
-      </div>
-
-      <Footer />
-
+      </Router>
 
     </div>
 

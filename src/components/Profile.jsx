@@ -1,28 +1,30 @@
 import React from "react";
 import { db, auth, googleProvider } from "../config/firebase";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { signOut } from "firebase/auth"
 
+const Profile = () => {
 
-const Profile = () => {  
+    const handleLogout = () => {
+        signOut(auth)
+            .then(() => {
+                console.log("User signed out");
+                // Optional: show a message or redirect
+            })
+            .catch((error) => {
+                console.error("Sign-out error", error);
+            });
+    };
 
-    const singInWGoogle = async () => {
-        try{
-            const result = await signInWithPopup(auth, googleProvider);
-            const user = result.user;
-            alert(`Welcome ${user.displayName}`);
-        } catch (error) {
-            alert(error.message);
-        }
-    }
+    const user = auth.currentUser;
 
     return (
         <div className="profile-page">
             <i class="fa-solid fa-user profile-icon"></i>
             <div className="account-details">
-                <span className="account-name">Hellings Makondetsa</span>
-                <span>Rocket CEO</span>
+                <span className="account-name">{user.displayName}</span>
+                <span>Budget Admin</span>
             </div>
-            <button onClick={singInWGoogle}>Signup with Google</button>
+            <button onClick={handleLogout}>Log Out</button>
 
         </div>
     );
